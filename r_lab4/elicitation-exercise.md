@@ -78,7 +78,7 @@ Because staff cannot verify ownership for expensive items through standard descr
 1. If two claimants report the same item model—such as two identical campus hoodies—and one recovered hoodie is visibly older or more worn than the other, what specific criteria do staff use to decide who gets which item when neither claimant documented wear conditions?
 2. What fallback verification procedure applies if a claimant paid for transit or the lost item with cash, leaving no electronic transaction trail, and station CCTV footage is too degraded, obstructed, or unavailable to confirm their presence?
 3. What clear dollar value or item classification officially mandates that an unverified item be turned over to the police rather than retained for standard 90-day disposal?
-4. When an item like a gaming mouse is transferred to the police, does Lost & Found retain a tracking record in the system, and can the claimant still check its status online?
+4. When an item like a jewellery is transferred to the police, does Lost & Found retain a tracking record in the system, and can the claimant still check its status online?
 5. How does the system handle security and privacy when verifying credit card numbers, ensuring staff only view the last four digits rather than full card details?
 6. When a passenger reports a lost electronic peripheral without a serial number, what alternative evidence (such as store receipts, box barcodes, or photos of their home desk setup) will staff accept before initiating a police transfer?
 7. If an item sent to the police is subsequently claimed by its owner, does the claimant retrieve it from the local police division or through the central Lost & Found office?
