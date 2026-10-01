@@ -2,15 +2,18 @@
 
 ## Elicitation Objective
 
-We want to learn how central Lost & Found staff actually verify ownership claims before releasing items. Our Sprint 0 requirements (R-008 and R-009) separate matching from verification, but we do not know what evidence staff consider sufficient, how they handle ambiguous cases, or what happens when a claimant cannot produce strong proof. This interview targets those gaps.
+We want to learn how central Lost & Found staff verify ownership before releasing property, and how passengers experience submitting reports and proving ownership. Our Sprint 0 requirements (R-008 and R-009) separate matching from verification, but leave the evidentiary standard and escalation paths undefined. This exercise gathers simulated evidence from both staff and claimant perspectives to clarify those workflows.
 
-## Stakeholder Role
+## Stakeholder Roles
 
-The interviewee plays a central Lost & Found staff member (STK-04 in our stakeholder register) who processes incoming recovered items, reviews candidate matches, and makes approval or rejection decisions on ownership claims.
+1. Central Lost & Found Staff Member (STK-04 in stakeholder register): Processes recovered items, reviews candidate matches, and makes approval, rejection, or escalation decisions.
+2. Passenger / Lost-Item Claimant (STK-01 in stakeholder register): Reports lost property through the system and provides evidence to recover it.
 
-## Interview Questions and Responses
+## Interview Transcripts
 
-*[SIMULATION] The following transcript records questions asked and responses given during the in-lab simulation.*
+*[SIMULATION] The following records reflect questions asked and answers given during the simulated in-lab interview rounds.*
+
+### Round 1: Central Lost & Found Staff
 
 1. How does the user submit the form, and what details are needed to submit it?
 Response: A generic submission like just writing "jacket" will not work. Claimants must provide a detailed form covering specific aspects: color, brand, design patterns, button types, zippers, and other specific construction features.
@@ -21,49 +24,62 @@ Response: Staff compare the specific details submitted on the form against the p
 3. What happens if the user does not remember the descriptive details of the item?
 Response: When a claimant cannot recall specific details on the initial form, staff place a phone call to the user to talk through the item and try to draw out additional distinguishing memories or evidence.
 
-4. What if the item is of high value and ownership cannot be verified?
-Response: If an item has high monetary or security value and staff cannot definitively verify ownership through claimant details or phone follow-up, staff forward the case and the item to the police.
+4. What is your most complicated case?
+Response: A lost gaming mouse. Staff could not get enough information from the claimant to verify ownership. Because it was considered a high-value item, it was forwarded to the police to handle.
+
+5. What happens generally if an item is of high value and ownership cannot be verified?
+Response: If an item has high monetary or security value and staff cannot definitively verify ownership through claimant details or telephone follow-up, staff forward the case and physical property to the police.
+
+### Round 2: Passenger / Claimant
+
+1. How was it submitting the form?
+Response: The passenger submitted a form for a lost wallet. They found it easy to identify because their ID was inside, and they were able to verify specific credit card numbers to complete the recovery and get the wallet back.
 
 ## Interview Synthesis Notes
 
-*[SIMULATION] The following synthesis is based on the simulated interview.*
+*[SIMULATION] The following synthesis is based on the simulated interviews.*
 
-The interview highlighted two major operational patterns: a strict intake filter on descriptive detail, and an escalation path for unverified high-value property.
+The two interviews demonstrate a sharp divide between intrinsically identifiable items and generic or high-value electronic peripherals.
 
-First, the staff member emphasized that standard lost-item forms cannot accept vague or generic submissions. For clothing items like jackets or bags, staff require granular details before treating the claim as actionable. These include brand names, exact color shades, closure mechanisms like zippers or specific buttons, and internal or external design marks. This granularity prevents individuals from claiming commonly lost items simply by browsing general descriptions.
+On the claimant side, items containing personal identification (like wallets with government IDs, student cards, or credit cards) present a smooth, low-friction recovery path. Claimants can readily confirm specific alphanumeric details, such as the name on an ID card or the last four digits of a payment card, providing definitive proof with minimal staff doubt.
 
-Second, the verification process includes an active human fallback. Rather than issuing an immediate automated rejection when a report lacks detail, staff contact the claimant by phone. The goal is to prompt the claimant verbally to recall details they may have missed while filling out the form online.
+On the staff side, items lacking visible personal identifiers create significant administrative friction. The staff member highlighted a lost gaming mouse as their most complicated case. Gaming peripherals often carry high retail value (frequently exceeding $100 to $200), yet their external appearance is typically uniform black plastic without visible owner names. When claimants cannot recall specific serial numbers, model variations, or unique wear patterns, staff reach an evidentiary dead end.
 
-Third, high-value items follow a separate branch when ownership remains ambiguous. If staff cannot establish ownership for high-value property through submitted details or telephone contact, they do not hold it for regular auction or disposal. Instead, the property is transferred to the police for investigation and custody.
+Because staff cannot verify ownership for expensive items through standard descriptions or phone outreach, they escalate the item to the police. This indicates that high value coupled with low identifiability forms the primary failure case for the in-house verification process.
 
 ## Coded Findings
 
 *[SIMULATION] All findings below are drawn from the simulated interview and must be labeled as simulation evidence if referenced in project deliverables.*
 
-1. Lost-item submissions require exhaustive physical attributes rather than broad item categories. A submission stating only "jacket" is rejected or blocked; users must provide brand, color, design, zipper style, and button details. *[Source: direct statement in simulation]*
+1. Wallets and personal documents have a streamlined, high-confidence verification mechanism because claimants can match unambiguous credentials like photo IDs and partial credit card numbers. *[Source: direct statement in simulation]*
 
-2. Phone contact serves as the primary fallback when online submissions lack sufficient detail. Staff call claimants directly to elicit clarifying descriptions before making a rejection decision. *[Source: direct statement in simulation]*
+2. Lost-item intake forms reject generic category entries. Submissions for items like apparel must include brand, color, design, buttons, and zipper details. *[Source: direct statement in simulation]*
 
-3. High-value property with unverified ownership is escalated to the police rather than processed through standard disposal or donation channels. *[Source: direct statement in simulation]*
+3. Staff use outbound telephone calls as an active fallback when claimants submit insufficient descriptive detail online. *[Source: direct statement in simulation]*
 
-4. Staff rely on unpublicized form fields to verify ownership. The system must withhold design details, zipper types, and markings from public catalogs so that matching submissions serve as proof of knowledge. *[Source: direct statement in simulation; inference: public catalog views must filter out descriptive sub-fields]*
+4. High-value electronics lacking personal identification, such as gaming mice, represent the most difficult category to verify because claimants rarely know serial numbers and external features look identical across units. *[Source: direct statement in simulation]*
 
-5. Police transfer introduces an external custody boundary that Sprint 0 did not document. When an unverified high-value item leaves central storage, staff need a specific system status to track transfer to law enforcement. *[Source: analyst inference based on direct statement]*
+5. When high-value items cannot be verified through submitted details or phone outreach, staff transfer both the case and physical custody to the police. *[Source: direct statement in simulation]*
 
-6. The staff member assumes claimants will answer phone calls from an unknown transit number, which may delay verification if calls go to voicemail. *[Source: analyst assumption]*
+6. The system currently lacks a defined verification threshold for electronics that are expensive but lack serial numbers or software accounts, forcing staff to use subjective judgment to categorize them as police matters. *[Source: analyst inference based on direct statement]*
+
+7. Calling claimants by phone assumes staff have the time and language capacity to conduct manual interviews for every incomplete claim, which may not scale during peak transit periods. *[Source: analyst assumption]*
 
 ## Contradictions and Ambiguities
 
-1. The requirement for exhaustive physical details conflicts with the realistic limits of passenger memory. Claimants under stress may forget button shapes or exact zipper brands, meaning that strict form validation could prevent legitimate owners from completing a claim unless staff intervene by phone.
+1. Verification difficulty depends on item category rather than claimant credibility. A claimant with a wallet recovers it almost instantly with card numbers, whereas a claimant with an expensive gaming accessory may face an indefinite delay and police referral simply because hardware lacks personal labels.
 
-2. The stakeholder did not define the threshold for "high value." Without a clear dollar amount or category list, deciding whether an unverified laptop, watch, or designer jacket goes to the police or into regular storage depends entirely on individual staff discretion.
+2. The criteria for what makes an item "high value" remain subjective. A gaming mouse can range from $30 to $250; treating it as a police matter rather than a standard lost-and-found item demonstrates that staff lack a clear price boundary or policy guideline.
 
-3. The transition to police custody lacks a clear resolution workflow. The stakeholder explained that unverified high-value items are handed to the police, but did not specify what happens if the claimant later produces a receipt or serial number after the police transfer has occurred.
+3. The system requires exhaustive physical descriptions (such as zipper styles and button counts) on web forms, but the passenger's actual wallet recovery relied entirely on private contents (ID and credit card digits), suggesting that form fields should adapt to item categories rather than asking for the same physical attributes across all items.
 
 ## Follow-Up Questions
 
-1. What specific dollar amount, item category, or condition triggers the rule to forward an unverified item to the police instead of keeping it in standard lost-and-found storage?
-2. When staff call a claimant to gather missing descriptions, how is that conversation logged in the system to ensure other staff members know what was discussed?
-3. If an item has already been forwarded to the police and the legitimate owner subsequently contacts Lost & Found with proof of ownership, what handoff procedure exists between the transit office and the police?
-4. How many failed contact attempts or days of no response occur before staff close an incomplete claim that was flagged for phone follow-up?
-5. How does the online form balance requiring detailed descriptions (such as zippers and buttons) with allowing claimants who genuinely do not remember those specifics to complete their report?
+1. If two claimants report the same item model—such as two identical campus hoodies—and one recovered hoodie is visibly older or more worn than the other, what specific criteria do staff use to decide who gets which item when neither claimant documented wear conditions?
+2. What fallback verification procedure applies if a claimant paid for transit or the lost item with cash, leaving no electronic transaction trail, and station CCTV footage is too degraded, obstructed, or unavailable to confirm their presence?
+3. What clear dollar value or item classification officially mandates that an unverified item be turned over to the police rather than retained for standard 90-day disposal?
+4. When an item like a gaming mouse is transferred to the police, does Lost & Found retain a tracking record in the system, and can the claimant still check its status online?
+5. How does the system handle security and privacy when verifying credit card numbers, ensuring staff only view the last four digits rather than full card details?
+6. When a passenger reports a lost electronic peripheral without a serial number, what alternative evidence (such as store receipts, box barcodes, or photos of their home desk setup) will staff accept before initiating a police transfer?
+7. If an item sent to the police is subsequently claimed by its owner, does the claimant retrieve it from the local police division or through the central Lost & Found office?
+
