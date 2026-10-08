@@ -15,7 +15,7 @@
 
 1. Staff opens the verification queue and selects an item with a candidate match.
 2. The system displays the unpublicized claimant attributes alongside the physical intake record.
-3. Staff checks the stored item and confirms that at least two unpublicized attributes match the claimant description.
+3. Staff checks the stored item and confirms that at least two unpublicized attributes match the claimant description, + ID proof.
 4. Staff enters a verification note, selects "Approved", and submits the decision.
 5. The system sets the claim status to "Claim Verified", sends a pickup notification to the claimant, and logs the decision.
 
