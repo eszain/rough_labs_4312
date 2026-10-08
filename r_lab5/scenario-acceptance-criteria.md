@@ -40,7 +40,7 @@ If an item has an estimated value of $200 or more and staff cannot verify owners
 
 ## Activity C: Peer Review and Revision
 
-### Peer Review Feedback (Anirudh Sundar)
+### Peer Review Feedback 
 
 1. The initial high-value escalation rule was untestable because it did not state a dollar threshold or required police tracking fields.
 2. The initial competing claims flow did not specify an automated lock, creating a risk that staff could accidentally release the item to one claimant while a dispute was pending.
