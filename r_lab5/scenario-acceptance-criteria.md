@@ -28,7 +28,7 @@ If the claimant description is too generic to verify, staff places an outbound c
 When two claimants file matching reports for the same recovered item, the system automatically marks the item as "Claim Disputed" and blocks release. Staff requests secondary proof such as receipts or bank timestamps from both claimants, approving the verified owner or escalating the case to a supervisor if neither can prove ownership.
 
 #### Exception 4a: Unverifiable High-Value Property (Police Escalation)
-If an item has an estimated value of $200 or more and staff cannot verify ownership through description or phone contact, staff selects "Escalate to Police". Staff enters the police occurrence number and badge ID, and the system transitions the item to "Transferred to Police Custody" while notifying the claimant.
+If an item has an estimated value of $1000 or more and staff cannot verify ownership through description or phone contact, staff selects "Escalate to Police". Staff enters the police occurrence number and badge ID, and the system transitions the item to "Transferred to Police Custody" while notifying the claimant.
 
 ## Activity B: Acceptance Criteria
 
