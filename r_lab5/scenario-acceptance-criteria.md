@@ -36,7 +36,7 @@ If an item has an estimated value of $1000 or more and staff cannot verify owner
 2. Given a lost report with fewer than two descriptive attributes, the system must disable the "Approve" button and require staff to either log a phone contact attempt or enter a rejection reason.
 3. When two distinct lost reports match the same recovered item above an 80% similarity threshold, the system must automatically set the item status to "Claim Disputed" and lock the release action for both claims.
 4. When staff escalates an unverified item valued at $1000 or greater to the police, the system must require a valid police occurrence number and officer badge ID of at least 4 characters before allowing status transition to "Transferred to Police Custody".
-5. During in-person wallet verification, the system must reject any free-text staff notes containing a 15-digit or 16-digit payment card number, allowing only the card issuer and last 4 digits to be recorded.
+5. During in-person wallet verification, the system must delete a 15-digit or 16-digit payment card number, allowing only the card issuer and last 4 digits to be recorded.
 
 ## Activity C: Peer Review and Revision
 
