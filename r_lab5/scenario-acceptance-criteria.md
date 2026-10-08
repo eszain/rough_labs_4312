@@ -35,7 +35,7 @@ If an item has an estimated value of $200 or more and staff cannot verify owners
 1. Given a candidate match with matching unpublicized attributes, when staff submits an approved decision, the system must update the record to "Claim Verified" and write an audit event with staff ID and timestamp within 1 second.
 2. Given a lost report with fewer than two descriptive attributes, the system must disable the "Approve" button and require staff to either log a phone contact attempt or enter a rejection reason.
 3. When two distinct lost reports match the same recovered item above an 80% similarity threshold, the system must automatically set the item status to "Claim Disputed" and lock the release action for both claims.
-4. When staff escalates an unverified item valued at $200 or greater to the police, the system must require a valid police occurrence number and officer badge ID of at least 4 characters before allowing status transition to "Transferred to Police Custody".
+4. When staff escalates an unverified item valued at $1000 or greater to the police, the system must require a valid police occurrence number and officer badge ID of at least 4 characters before allowing status transition to "Transferred to Police Custody".
 5. During in-person wallet verification, the system must reject any free-text staff notes containing a 15-digit or 16-digit payment card number, allowing only the card issuer and last 4 digits to be recorded.
 
 ## Activity C: Peer Review and Revision
@@ -48,6 +48,6 @@ If an item has an estimated value of $200 or more and staff cannot verify owners
 
 ### Revision Summary
 
-1. Added a measurable $200 valuation threshold and mandatory 4-character input checks for police occurrence number and badge ID in Exception 4a and Criterion 4.
+1. Added a measurable $1000 valuation threshold and mandatory 4-character input checks for police occurrence number and badge ID in Exception 4a and Criterion 4.
 2. Added an automated system lock in Exception 3a and Criterion 3 that sets the status to "Claim Disputed" whenever two claims exceed an 80% match similarity threshold.
 3. Added input validation in Criterion 5 that blocks full 15-digit and 16-digit card numbers from being entered into verification notes.
