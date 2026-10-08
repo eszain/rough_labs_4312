@@ -41,10 +41,9 @@ If an item has an estimated value of $1000 or more and staff cannot verify owner
 ## Activity C: Peer Review and Revision
 
 ### Peer Review Feedback 
-
-1. The initial high-value escalation rule was untestable because it did not state a dollar threshold or required police tracking fields.
-2. The initial competing claims flow did not specify an automated lock, creating a risk that staff could accidentally release the item to one claimant while a dispute was pending.
-3. The initial draft allowed staff to write card numbers in verification notes, which violated privacy policies and lacked concrete validation limits.
+1. The initial competing claims flow did not specify an automated lock, creating a risk that staff could accidentally release the item to one claimant while a dispute was pending.
+2. The initial draft allowed staff to write card numbers in verification notes, which violated privacy policies and lacked concrete validation limits.
+3. The Verification Process when the product had an incomplete description was not comprehensive.  
 
 ### Revision Summary
 
