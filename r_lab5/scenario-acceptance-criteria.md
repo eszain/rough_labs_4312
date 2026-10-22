@@ -4,8 +4,8 @@
 
 ### Use Case: UC-04 Central Ownership Verification
 
-* Primary Actor: Central Lost & Found Staff (STK-04).
-* Secondary Actors: Passenger Claimant (STK-01), Transit Police Liaison.
+* Primary Actor: Central lost & found staff.
+* Secondary Actors: Passenger claimant, transit police liaison.
 * Goal: Verify that a claimant owns a recovered item before authorizing return and log the decision.
 * Trigger: A candidate match between a lost report and a found item enters the verification queue.
 * Preconditions: The recovered item has an intake barcode in storage, a matching lost report exists, and staff is logged in with verification permissions.
