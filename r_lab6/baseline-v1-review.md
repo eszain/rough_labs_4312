@@ -3,19 +3,24 @@
 ## Activity A: Five-Requirement Quality Sample
 
 1. R-002 Legitimate Item Recovery (Stakeholder / Must / Issue #3):
-The system shall support recovery of found property by a claimant only after an authorized ownership-verification decision has approved the associated claim. This is atomic with clear business intent, though authorization rules require child functional requirements. Verification will test that an unverified item cannot transition to release without an explicit approval record.
+The system shall support recovery of found property by a claimant only after an authorized ownership-verification decision has approved the associated claim.
+This is atomic with clear business intent, though authorization rules require child functional requirements. Verification will test that an unverified item cannot transition to release without an explicit approval record.
 
-2. R-008 Candidate Match Ranking (Functional / Must / Issue #9):
-The system shall produce an ordered list of potential found-item matches for a lost-item report using match attributes configured by the transit authority. This maintains clean separation between algorithmic matching and claim release per Decision D-004. Verification will submit a lost report matching three inventory items with varying time/color attributes to confirm results sort by similarity score.
+3. R-008 Candidate Match Ranking (Functional / Must / Issue #9):
+The system shall produce an ordered list of potential found-item matches for a lost-item report using match attributes configured by the transit authority.
+This maintains clean separation between algorithmic matching and claim release per Decision D-004. Verification will submit a lost report matching three inventory items with varying time/color attributes to confirm results sort by similarity score.
 
-3. R-009 Verification Decision Record (Functional / Must / Issue #10):
-Before an item can be returned or released, the system shall require an authorized Lost & Found staff member to record a claim decision of approved or rejected with staff ID, timestamp, and result. This is atomic and auditable, but omits intermediate telephone triage states. Verification will attempt to record an approval without staff ID or timestamp and assert the system rejects the transaction.
+5. R-009 Verification Decision Record (Functional / Must / Issue #10):
+Before an item can be returned or released, the system shall require an authorized Lost & Found staff member to record a claim decision of approved or rejected with staff ID, timestamp, and result.
+This is atomic and auditable, but omits intermediate telephone triage states. Verification will attempt to record an approval without staff ID or timestamp and assert the system rejects the transaction.
 
-4. R-019 Staff Audit Logging (Quality / Security / Must / Issue #15):
-For every auditable staff action, the system shall create an audit entry containing authenticated staff identifier, action type, affected record identifier, and timestamp. This addresses an atomic security concern, though specific auditable actions require an explicit enum list in system documentation. Verification will execute custody and verification events and assert immutable log entries exist for each.
+7. R-019 Staff Audit Logging (Quality / Security / Must / Issue #15):
+For every auditable staff action, the system shall create an audit entry containing authenticated staff identifier, action type, affected record identifier, and timestamp.
+This addresses an atomic security concern, though specific auditable actions require an explicit enum list in system documentation. Verification will execute custody and verification events and assert immutable log entries exist for each.
 
-5. R-025 Mobile Responsive Interface (Constraint / Should / Untracked Issue):
-The primary passenger workflows shall remain functionally complete at viewport widths of 320 px or greater without requiring horizontal page scrolling. This sets an objective and testable layout threshold, though the corresponding GitHub Issue must be opened. Verification will run automated layout tests across 320 px, 375 px, and 414 px viewports to assert zero horizontal scroll overflow.
+9. R-025 Mobile Responsive Interface (Constraint / Should / Untracked Issue):
+The primary passenger workflows shall remain functionally complete at viewport widths of 320 px or greater without requiring horizontal page scrolling.
+This sets an objective and testable layout threshold, though the corresponding GitHub Issue must be opened. Verification will run automated layout tests across 320 px, 375 px, and 414 px viewports to assert zero horizontal scroll overflow.
 
 ## Activity B: Traceability Chains
 
