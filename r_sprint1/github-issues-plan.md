@@ -29,12 +29,16 @@ The repository currently contains 15 issues created during Sprint 0. All 15 issu
 | [#16](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/16) | R-021 | QR-003 | [R-021] Role-Based Access Control | `status:accepted` | Confirm role definitions: Operator, CSA, Claims Officer, Admin. |
 | [#17](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/17) | R-011 | FR-005 | [R-011] Expedited Verification Queue | `status:accepted` | **Created on Oct 25.** Active in Sprint 1 Baseline. |
 | [#18](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/18) | R-012 | FR-006 | [R-012] High-Priority Staff Notification | `status:accepted` | **Created on Oct 25.** Active in Sprint 1 Baseline. |
+| [#19](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/19) | R-015 | FR-008 | [R-015] Central Processing Delay Notice | `status:accepted` | **Created on Oct 25.** Active in Sprint 1 Baseline. |
+| [#20](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/20) | R-017 | FR-010 | [R-017] Remote Courier Dispatch Record | `status:accepted` | **Created on Oct 25.** Active in Sprint 1 Baseline. |
+| [#21](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/21) | R-018 | FR-011 | [R-018] Remote Delivery Fee Settlement Gate | `status:accepted` | **Created on Oct 25.** Active in Sprint 1 Baseline. |
+| [#22](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/22) | R-020 | QR-002 | [R-020] Claimant PII Retention and Masking | `status:accepted` | **Created on Oct 25.** Active in Sprint 1 Baseline. |
 
 ---
 
-## 2. GitHub Issues Creation Status (11 Remaining)
+## 2. GitHub Issues Creation Status (7 Remaining)
 
-Requirements **R-011** ([#17](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/17)) and **R-012** ([#18](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/18)) have been created. The remaining 11 requirements below are accepted into Baseline v1.0 and ready for creation when authorized.
+Requirements **R-011** ([#17](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/17)), **R-012** ([#18](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/18)), **R-015** ([#19](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/19)), **R-017** ([#20](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/20)), **R-018** ([#21](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/21)), and **R-020** ([#22](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/22)) have been created. The remaining 7 requirements below are accepted into Baseline v1.0 and ready for creation when authorized.
 
 ### Issue 1: [R-011] Expedited Verification Queue — CREATED ([#17](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/17))
 - **Status:** Created (`status:accepted`, `type:functional`, `priority:should`)
@@ -68,10 +72,9 @@ Requirements **R-011** ([#17](https://github.com/EECS4312F26/eecs4312-project-gr
   - **Verification:** Intake an urgent item and assert an internal notification event is generated and delivered to active staff session.
   ```
 
-### Issue 3: [R-015] Central Processing Delay Notice
-- **Type:** `type:functional`
-- **Priority:** `priority:should`
-- **Status:** `status:accepted`
+### Issue 3: [R-015] Central Processing Delay Notice — CREATED ([#19](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/19))
+- **Status:** Created (`status:accepted`, `type:functional`, `priority:should`)
+- **URL:** https://github.com/EECS4312F26/eecs4312-project-group-11/issues/19
 - **Body:**
   ```markdown
   ### Requirement Statement
@@ -85,10 +88,9 @@ Requirements **R-011** ([#17](https://github.com/EECS4312F26/eecs4312-project-gr
   - **Verification:** Inspect submission form and status page to confirm explanatory 24–48 hour intake latency text is visible.
   ```
 
-### Issue 4: [R-017] Remote Courier Dispatch Record
-- **Type:** `type:functional`
-- **Priority:** `priority:should`
-- **Status:** `status:accepted`
+### Issue 4: [R-017] Remote Courier Dispatch Record — CREATED ([#20](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/20))
+- **Status:** Created (`status:accepted`, `type:functional`, `priority:should`)
+- **URL:** https://github.com/EECS4312F26/eecs4312-project-group-11/issues/20
 - **Body:**
   ```markdown
   ### Requirement Statement
@@ -102,10 +104,9 @@ Requirements **R-011** ([#17](https://github.com/EECS4312F26/eecs4312-project-gr
   - **Verification:** Trigger remote delivery flow; verify dispatch record is generated with carrier reference and address fields.
   ```
 
-### Issue 5: [R-018] Remote Delivery Fee Settlement Gate
-- **Type:** `type:functional`
-- **Priority:** `priority:should`
-- **Status:** `status:accepted`
+### Issue 5: [R-018] Remote Delivery Fee Settlement Gate — CREATED ([#21](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/21))
+- **Status:** Created (`status:accepted`, `type:functional`, `priority:should`)
+- **URL:** https://github.com/EECS4312F26/eecs4312-project-group-11/issues/21
 - **Body:**
   ```markdown
   ### Requirement Statement
@@ -119,10 +120,9 @@ Requirements **R-011** ([#17](https://github.com/EECS4312F26/eecs4312-project-gr
   - **Verification:** Attempt carrier release API call with payment status Unpaid; assert system rejects status change with error.
   ```
 
-### Issue 6: [R-020] Claimant PII Retention and Masking
-- **Type:** `type:quality`
-- **Priority:** `priority:must`
-- **Status:** `status:accepted`
+### Issue 6: [R-020] Claimant PII Retention and Masking — CREATED ([#22](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/22))
+- **Status:** Created (`status:accepted`, `type:quality`, `priority:must`)
+- **URL:** https://github.com/EECS4312F26/eecs4312-project-group-11/issues/22
 - **Body:**
   ```markdown
   ### Requirement Statement
@@ -136,10 +136,9 @@ Requirements **R-011** ([#17](https://github.com/EECS4312F26/eecs4312-project-gr
   - **Verification:** Attempt to paste a 16-digit card number into staff verification notes; assert system sanitizes text to issuer and last 4 digits.
   ```
 
-### Issue 7: [R-024] Public Web Service Availability
-- **Type:** `type:quality`
-- **Priority:** `priority:should`
-- **Status:** `status:accepted`
+### Issue 7: [R-024] Public Web Service Availability — CREATED ([#23](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/23))
+- **Status:** Created (`status:accepted`, `type:quality`, `priority:should`)
+- **URL:** https://github.com/EECS4312F26/eecs4312-project-group-11/issues/23
 - **Body:**
   ```markdown
   ### Requirement Statement
@@ -153,10 +152,9 @@ Requirements **R-011** ([#17](https://github.com/EECS4312F26/eecs4312-project-gr
   - **Verification:** Review automated ping/uptime monitoring telemetry over a 30-day simulated deployment interval.
   ```
 
-### Issue 8: [R-025] Responsive Mobile Viewport Layout
-- **Type:** `type:constraint`
-- **Priority:** `priority:should`
-- **Status:** `status:accepted`
+### Issue 8: [R-025] Responsive Mobile Viewport Layout — CREATED ([#24](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/24))
+- **Status:** Created (`status:accepted`, `type:constraint`, `priority:should`)
+- **URL:** https://github.com/EECS4312F26/eecs4312-project-group-11/issues/24
 - **Body:**
   ```markdown
   ### Requirement Statement
@@ -170,10 +168,9 @@ Requirements **R-011** ([#17](https://github.com/EECS4312F26/eecs4312-project-gr
   - **Verification:** Run automated Playwright tests at viewport widths 320 px, 375 px, and 414 px; assert zero horizontal scroll overflow.
   ```
 
-### Issue 9: [R-026] Automated Claim Status Notifications
-- **Type:** `type:functional`
-- **Priority:** `priority:should`
-- **Status:** `status:accepted`
+### Issue 9: [R-026] Automated Claim Status Notifications — CREATED ([#25](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/25))
+- **Status:** Created (`status:accepted`, `type:functional`, `priority:should`)
+- **URL:** https://github.com/EECS4312F26/eecs4312-project-group-11/issues/25
 - **Body:**
   ```markdown
   ### Requirement Statement
@@ -187,10 +184,9 @@ Requirements **R-011** ([#17](https://github.com/EECS4312F26/eecs4312-project-gr
   - **Verification:** Update claim status to Ready for Pickup; assert simulated notification service receives outbound message payload.
   ```
 
-### Issue 10: [R-027] In-Person Pickup Receipt Acknowledgment
-- **Type:** `type:functional`
-- **Priority:** `priority:must`
-- **Status:** `status:accepted`
+### Issue 10: [R-027] In-Person Pickup Receipt Acknowledgment — CREATED ([#26](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/26))
+- **Status:** Created (`status:accepted`, `type:functional`, `priority:must`)
+- **URL:** https://github.com/EECS4312F26/eecs4312-project-group-11/issues/26
 - **Body:**
   ```markdown
   ### Requirement Statement
@@ -204,10 +200,9 @@ Requirements **R-011** ([#17](https://github.com/EECS4312F26/eecs4312-project-gr
   - **Verification:** Complete pickup flow with empty signature and ID fields; assert system refuses to mark item Returned.
   ```
 
-### Issue 11: [R-028] Public Catalog Search and Filter
-- **Type:** `type:functional`
-- **Priority:** `priority:could`
-- **Status:** `status:accepted`
+### Issue 11: [R-028] Public Catalog Search and Filter — CREATED ([#27](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/27))
+- **Status:** Created (`status:accepted`, `type:functional`, `priority:could`)
+- **URL:** https://github.com/EECS4312F26/eecs4312-project-group-11/issues/27
 - **Body:**
   ```markdown
   ### Requirement Statement
@@ -221,10 +216,9 @@ Requirements **R-011** ([#17](https://github.com/EECS4312F26/eecs4312-project-gr
   - **Verification:** Filter by category Backpack and date range; verify results contain only records matching both criteria.
   ```
 
-### Issue 12: [R-029] Disputed Claim Lock Mechanism
-- **Type:** `type:functional`
-- **Priority:** `priority:must`
-- **Status:** `status:accepted`
+### Issue 12: [R-029] Disputed Claim Lock Mechanism — CREATED ([#28](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/28))
+- **Status:** Created (`status:accepted`, `type:functional`, `priority:must`)
+- **URL:** https://github.com/EECS4312F26/eecs4312-project-group-11/issues/28
 - **Body:**
   ```markdown
   ### Requirement Statement
@@ -238,10 +232,9 @@ Requirements **R-011** ([#17](https://github.com/EECS4312F26/eecs4312-project-gr
   - **Verification:** Associate second claim to an item with an existing pending claim; assert status changes to Claim Disputed and release button is disabled.
   ```
 
-### Issue 13: [R-030] Telephone Triage Follow-Up Management
-- **Type:** `type:functional`
-- **Priority:** `priority:should`
-- **Status:** `status:accepted`
+### Issue 13: [R-030] Telephone Triage Follow-Up Management — CREATED ([#29](https://github.com/EECS4312F26/eecs4312-project-group-11/issues/29))
+- **Status:** Created (`status:accepted`, `type:functional`, `priority:should`)
+- **URL:** https://github.com/EECS4312F26/eecs4312-project-group-11/issues/29
 - **Body:**
   ```markdown
   ### Requirement Statement
