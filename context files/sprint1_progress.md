@@ -30,9 +30,9 @@ The table below maps our project progress strictly to each numbered section of `
 
 | Handout Section | Section Name | Required Deliverables | Status | Deliverable File Location | Rubric Weight & Notes |
 | :--- | :--- | :--- | :---: | :--- | :--- |
-| **Section 1** | **Sprint 0 Continuity** | `sprint0-feedback.md` | ✅ Complete | `doc/sprint1/sprint0-feedback.md` | **2 marks** (Rubric 1.2). Explicitly addresses all 4 marker comments from Sprint 0 grading and Lab 6 defect corrections. |
-| **Section 2** | **Sprint 1 Planning** | `sprint1-plan.md` | ✅ Complete | `doc/sprint1/sprint1-plan.md` | **2 marks** (Rubric 1.1). Records roles (Zain, Anirudh, Sufyan), gaps G-01–G-09, schedule, and risks. |
-| **Section 3** | **Elicitation Plan** | `elicitation-plan.md` | ✅ Complete | `doc/sprint1/elicitation-plan.md` | **8 marks** (Rubric 2.1 & 2.2). Covers gaps G-01–G-09, 3 techniques (ELIC-01, ELIC-02, ELIC-03), ethics/privacy. |
+| **Section 1** | **Sprint 0 Continuity** | `sprint0-feedback.md` | ✅ Complete | `doc/sprint1/sprint0-feedback.md` | **2 marks** (Rubric 1.2). Explicitly addresses all 4 marker comments from Sprint 0 grading and Lab 6 defect corrections. Aligned decision records D-001–D-010 and context diagram reference. |
+| **Section 2** | **Sprint 1 Planning** | `sprint1-plan.md` | ✅ Complete | `doc/sprint1/sprint1-plan.md` | **2 marks** (Rubric 1.1). Records roles (Zain, Anirudh, Sufyan), gaps G-01–G-09, task allocation with peer review pairs, schedule milestones, and explicit risks/mitigations. |
+| **Section 3** | **Elicitation Plan** | `elicitation-plan.md` | ✅ Complete | `doc/sprint1/elicitation-plan.md` | **8 marks** (Rubric 2.1 & 2.2). Covers gaps G-01–G-09, 3 techniques (ELIC-01, ELIC-02, ELIC-03), ethics/privacy rules, limitations, and schedule with explicit lead responsibilities. |
 | **Section 4** | **Elicitation Evidence & Synthesis** | `elicitation-evidence.md`<br>`elicitation-synthesis.md`<br>`evidence.md` | ✅ Complete | `doc/sprint1/elicitation-evidence.md`<br>`doc/sprint1/elicitation-synthesis.md`<br>`doc/sprint1/evidence.md` | **12 marks** (Rubric 3.1, 3.2, 3.3). Full evidence discipline separating direct, documented, analogy, simulation, and assumption. Consolidated evidence record (`evidence.md`, 1098 lines) committed by teammate. |
 | **Section 5** | **Revised Foundation Artifacts** | Revised copies of:<br>- `glossary.md`<br>- `stakeholders.md`<br>- `context.md`<br>- `personas.md`<br>- `vision-scope.md` | ✅ Complete | `doc/sprint1/glossary.md`<br>`doc/sprint1/stakeholders.md`<br>`doc/sprint1/context.md`<br>`doc/sprint1/personas.md`<br>`doc/sprint1/vision-scope.md` | **2 marks** (Rubric 4.5). Revised foundation artifacts matching Handout Section 14 standard names. Directly resolves Sprint 0 feedback with IPC/AODA and external IT/Logistics/Payment stakeholders. |
 | **Section 6** | **Requirements Baseline v1.0** | `requirements-baseline-v1.md` | ✅ Complete | `doc/sprint1/requirements-baseline-v1.md` | **18 marks** (Rubric 4.1–4.4). 28 atomic requirements with 100% active GitHub issue links (`#2`–`#29`). Added explicit `Rationale` and `Status` (`Accepted (Baseline v1.0)`) columns across all 5 tables to guarantee full 4/4 marks under Rubric 4.3. |
@@ -137,3 +137,37 @@ A comprehensive cross-deliverable consistency audit conducted on October 25, 202
 ### 4. Contextualizing 38 Candidate Requirements in `evidence.md` — ✅ RESOLVED
 - **Audit Finding:** `evidence.md` (Section F) lists 38 draft candidate requirements explored during elicitation, whereas `requirements-baseline-v1.md` contains 28 accepted atomic requirements.
 - **Assessment & PR Strategy:** Not a contradiction—`evidence.md` clearly marks them as an unvalidated candidate pool. The Baseline PR summary explicitly clarifies that elicitation initially explored 38 candidate statements, which were consolidated and refined through quality inspection into the accepted 28 atomic requirements in Baseline v1.0.
+
+---
+
+## 7. Deep-Dive Audit: Handout Sections 1 to 3 Cross-Checks & Consistency Analysis
+
+A rigorous cross-document scan of Handout Sections 1, 2, and 3 was conducted against `doc/sprint1/sprint0-feedback.md`, `doc/sprint1/sprint1-plan.md`, `doc/sprint1/elicitation-plan.md`, and related artifacts in the workspace.
+
+### Section 1: Sprint 0 Continuity (`doc/sprint1/sprint0-feedback.md`)
+- Handout Requirements (Sections 1.1 & 1.2): Preserve `doc/sprint0/`, address all important marker comments, state agreement, action taken, affected artifacts, links to issues/commits, and note unresolved items.
+- Rubric Alignment (Rubric 1.2, 2 marks): All 4 marker comments (diagram readability, IPC/AODA glossary entries, external IT/payment stakeholders, and dated decision records) plus 6 Lab 6 defect corrections are explicitly evaluated, accepted, and resolved.
+- Contradiction Detected and Fixed (Decision Mapping): Previously, `sprint0-feedback.md` listed decisions D-001 through D-007, where D-005 was police escalation and D-007 was competing claims, which conflicted with `doc/sprint1/decisions.md` (which defines 10 decisions D-001–D-010). Updated `sprint0-feedback.md` to list the complete set of 10 decisions (`D-001` through `D-010`) with their exact ISO dates and titles.
+- Contradiction Detected and Fixed (Context Model Filename): `sprint0-feedback.md` previously cited `doc/sprint1/models/context-v2.puml`, which was never created because the team transitioned to high-resolution draw.io vector exports (`Context_Model.drawio.png`). Updated `sprint0-feedback.md` to reference `models/Context_Model.drawio.png`.
+- Personas Status Clarified: Updated Section 4 summary table to reflect that `doc/sprint1/personas.md` exists and was reviewed and aligned with the baseline.
+
+### Section 2: Sprint 1 Planning (`doc/sprint1/sprint1-plan.md`)
+- Handout Requirements (Section 2): Document participants, sprint goal, RE activities, information gaps from Sprint 0, elicitation activities, artifacts/models, responsibilities/review roles, risks/blockers, internal deadlines, and priority requirements.
+- Rubric Alignment (Rubric 1.1, 2 marks): Work is meaningfully distributed across all 3 team members (Zain, Anirudh, Sufyan) with designated author and peer-reviewer allocations across all 13 sections.
+- Defect Detected and Fixed (Missing Risk Statements): In Section 5, the previous text had a header `Risks and Mitigations:` but only listed three bullet points beginning with "Mitigated by...", completely omitting the underlying risks. Updated `sprint1-plan.md` to explicitly define the 4 core risks (cross-artifact terminology drift, premature software design leakage, non-verifiable requirements acceptance, and frontline turnaround time constraints) alongside their concrete mitigations.
+
+### Section 3: Elicitation Plan (`doc/sprint1/elicitation-plan.md`)
+- Handout Requirements (Sections 3.1–3.4): Document elicitation objectives, information gaps (G-01–G-09), target roles/sources, technique justifications, prompts/questions, expected evidence types, bias/limitations, ethics/privacy, and responsibility/schedule. Minimum 3 activities with 2 techniques; at least 1 grounded in observable/documented evidence.
+- Rubric Alignment (Rubric 2.1 & 2.2, 8 marks): Covers gaps G-01 to G-09; employs 3 techniques (ELIC-01 qualitative feedback analysis, ELIC-02 existing system analysis grounded in official documentation, ELIC-03 analytical scenario walkthroughs); establishes clear evidence classifications and privacy safeguards.
+- Defect Detected and Fixed (Lead Responsibilities in Schedule): Section 6 previously had `Activity`, `Planned date`, and `Output`, but omitted the explicit responsibility assignment required by Handout Section 3.2 item 9 and Rubric 2.2. Updated the schedule table to include explicit `Lead Responsibility` and `Review & Contributing Members` columns (ELIC-01: Anirudh Sundar; ELIC-02: Muhammad Sufyan; ELIC-03: Mohammad Zain Al Syed).
+
+### Cross-Deliverable Alignment Summary (Sections 1–3)
+The table below confirms the unified state across Sections 1 to 3 after all cross-check corrections:
+
+| Dimension | `sprint0-feedback.md` | `sprint1-plan.md` | `elicitation-plan.md` | Baseline Artifacts | Alignment Status |
+|---|---|---|---|---|---|
+| Team Members | Mohammad Zain Al Syed, Anirudh Sundar, Muhammad Sufyan | Mohammad Zain Al Syed, Anirudh Sundar, Muhammad Sufyan | Mohammad Zain Al Syed, Anirudh Sundar, Muhammad Sufyan | All 3 students listed with GitHub handles | 100% Consistent |
+| Information Gaps | Reflected in Sprint 0 defect responses | Explicitly defined as G-01 through G-09 | Explicitly traced as G-01 through G-09 | Traced to baseline candidate requirements | 100% Consistent |
+| Decision Records | D-001 through D-010 (ISO dates) | D-001 through D-010 assigned to Sec 13 | Cross-referenced in findings | D-001 through D-010 in `decisions.md` | 100% Consistent |
+| Context Model | References `Context_Model.drawio.png` | Assigned in Section 3 task table | Boundary defined in Section 2 | Embedded in `context.md` & `models/` | 100% Consistent |
+| Elicitation Tasks | Links to ELIC-01–03 findings | Allocated in Section 3 task breakdown | Detailed with 9 required attributes | 1000+ lines in `evidence.md` | 100% Consistent |
