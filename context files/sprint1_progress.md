@@ -34,16 +34,16 @@ The table below maps our project progress strictly to each numbered section of `
 | **Section 2** | **Sprint 1 Planning** | `sprint1-plan.md` | ✅ Complete | `doc/sprint1/sprint1-plan.md` | **2 marks** (Rubric 1.1). Records roles (Zain, Anirudh, Sufyan), gaps G-01–G-09, schedule, and risks. |
 | **Section 3** | **Elicitation Plan** | `elicitation-plan.md` | ✅ Complete | `doc/sprint1/elicitation-plan.md` | **8 marks** (Rubric 2.1 & 2.2). Covers gaps G-01–G-09, 3 techniques (ELIC-01, ELIC-02, ELIC-03), ethics/privacy. |
 | **Section 4** | **Elicitation Evidence & Synthesis** | `elicitation-evidence.md`<br>`elicitation-synthesis.md`<br>`evidence.md` | ✅ Complete | `doc/sprint1/elicitation-evidence.md`<br>`doc/sprint1/elicitation-synthesis.md`<br>`doc/sprint1/evidence.md` | **12 marks** (Rubric 3.1, 3.2, 3.3). Full evidence discipline separating direct, documented, analogy, simulation, and assumption. Consolidated evidence record (`evidence.md`, 1098 lines) committed by teammate. |
-| **Section 5** | **Revised Foundation Artifacts** | Revised copies of:<br>- `glossary.md`<br>- `stakeholders.md`<br>- `context.md`<br>- `vision-scope.md` | ⚠️ Needs Creation | `doc/sprint1/glossary.md`<br>`doc/sprint1/stakeholders.md`<br>`doc/sprint1/context.md` | **2 marks** (Rubric 4.5). Directly resolves Sprint 0 feedback: adds IPC/AODA, adds 3 external stakeholders, improves diagram zoom. |
+| **Section 5** | **Revised Foundation Artifacts** | Revised copies of:<br>- `Rev-glossary.md`<br>- `Rev-stakeholders.md`<br>- `Rev-context.md`<br>- `Rev-personas.md`<br>- `Rev-vision-scope.md` | ✅ Complete | `doc/sprint1/Rev-*.md` | **2 marks** (Rubric 4.5). Revised foundation artifacts committed by teammate. Resolves Sprint 0 feedback. |
 | **Section 6** | **Requirements Baseline v1.0** | `requirements-baseline-v1.md` | ✅ Complete | `doc/sprint1/requirements-baseline-v1.md` | **18 marks** (Rubric 4.1–4.4). 28 atomic requirements, full metadata, rationale, verification ideas, defect evolution, and 100% active GitHub issue links. |
 | **Section 7** | **Scenarios, User Stories, Use Cases, & AC** | `scenarios-use-cases.md` | ✅ Complete | `doc/sprint1/scenarios-use-cases.md` | **10 marks** (Rubric 5.1, 5.2, 5.3). 10 user stories, 3 detailed use cases (UC-01, UC-02, UC-03) with rich exception flows, and 10 testable Given/When/Then ACs. |
 | **Section 8** | **Requirements Models** | `Models/README.md`<br>`Context_Model.drawio.png`<br>`Domain_Model.drawio.png`<br>`Behavioral_Model_Ownership_Verification.drawio.png`<br>`Behavioral_Model_Staff_Handling.drawio.png` | ✅ Complete | `doc/sprint1/Models/` | **8 marks** (Rubric 6.1, 6.2, 6.3). Teammate committed all 4 high-resolution drawio models and comprehensive 300+ line `README.md` covering system boundary, domain entities, and behavioral states. |
-| **Section 9** | **Traceability** | `traceability.md` | ⚠️ Needs Creation | `doc/sprint1/traceability.md` | **4 marks** (Rubric 7.1). Bidirectional matrix tracing sources $\to$ requirements $\to$ user stories $\to$ use cases $\to$ AC $\to$ GitHub issues (Assigned to Sufyan). |
+| **Section 9** | **Traceability** | `requirements-traceability-matrix.md` | ✅ Complete | `doc/sprint1/requirements-traceability-matrix.md` | **4 marks** (Rubric 7.1). Bidirectional matrix tracing sources $\to$ requirements $\to$ user stories $\to$ use cases $\to$ AC $\to$ GitHub issues. Committed by Abdullah. |
 | **Section 10** | **GitHub Issues & Project Tracking** | 28 GitHub Issues with metadata labels, Project board, and Baseline PR | ✅ Complete (Issues: 28/28)<br>🔄 PR at submission | GitHub Repo & Project #12 | **4 marks** (Rubric 7.2 & 7.3). All 28 requirements have live GitHub Issues with metadata labels (`#2`–`#29`). Project board updated. |
-| **Section 11** | **Requirements Quality Review** | `quality-review.md` | ⚠️ Needs Creation | `doc/sprint1/quality-review.md` | **5 marks** (Rubric 8.1 & 8.2). Peer inspection by 2 team members using Lab 6 defect review, verification criteria, and disposition log (Assigned to Sufyan). |
-| **Section 12** | **Prototype Refinement** | `prototype/README.md`<br>Updated low-fi assets | ⚠️ Needs Creation | `doc/sprint1/prototype/README.md` | **2 marks** (Rubric 9.1). Explains Sprint 1 RE enhancements: phone triage flow, dispute lock, courier delivery fee gate, mobile layout (Assigned to Anirudh). |
-| **Section 13** | **Decisions, Retrospective, & AI Use** | `decisions.md`<br>`retrospective.md`<br>`ai-use.md` | 🔄 Pushed (AI-use deferred) | `doc/sprint1/decisions.md`<br>`doc/sprint1/retrospective.md` | **2 marks** (Rubric 10.1). Dated decision records D-001–D-010 (resolves Sprint 0 comment) and comprehensive retrospective pushed. `ai-use.md` will be finalized at sprint completion. |
-| **Section 14** | **Repository Structure & Integration** | Clean `doc/sprint1/` layout & Baseline PR | ✅ Structured in `doc/sprint1/`<br>🔄 PR at submission | `doc/sprint1/` | **3 marks** (Rubric 8.3 & 11.1). Baseline PR with reviewer approval, no broken links, professional tone avoiding AI cliches. |
+| **Section 11** | **Requirements Quality Review** | `requirements-quality-review.md` | ✅ Complete | `doc/sprint1/requirements-quality-review.md` | **5 marks** (Rubric 8.1 & 8.2). Peer inspection using Lab 6 defect review, 13 quality dimensions, and disposition log. Committed by Abdullah. |
+| **Section 12** | **Prototype Refinement** | `prototype/README.md`<br>Updated low-fi assets | ✅ Complete | `doc/sprint1/prototype/README.md` | **2 marks** (Rubric 9.1). Storyboards, activity diagram, and screen flows illustrating RE enhancements (phone triage, dispute lock, courier gate). Committed by Anirudh. |
+| **Section 13** | **Decisions, Retrospective, & AI Use** | `decisions.md`<br>`retrospective.md`<br>`ai-use.md` | ✅ Complete | `doc/sprint1/decisions.md`<br>`doc/sprint1/retrospective.md`<br>`doc/sprint1/ai-use.md` | **2 marks** (Rubric 10.1). Dated decision records D-001–D-010 (resolves Sprint 0 comment), comprehensive retrospective, and AI declaration log. |
+| **Section 14** | **Repository Structure & Integration** | Clean `doc/sprint1/` layout & Baseline PR | ✅ Complete<br>🔄 PR at submission | `doc/sprint1/` | **3 marks** (Rubric 8.3 & 11.1). Baseline PR ready for opening with reviewer approvals, no broken links, professional tone. |
 
 ---
 
@@ -102,14 +102,16 @@ All 28 baseline requirements are now fully represented as distinct GitHub Issues
 
 ## 5. Roadmap to 80 / 80 Marks
 
-With all 28 requirements established and 100% of GitHub Issues created, the current status toward securing full marks is:
+With all 28 requirements established, 100% of GitHub Issues created, and all team deliverables pulled and synchronized, the status across all rubric sections is:
 1. ✅ **All 28 GitHub Issues Created & Linked**: Requirements Baseline v1.0 table is 100% linked (`#2`–`#29`).
-2. ✅ **Planning & Continuity (Sections 1 & 2)**: `sprint0-feedback.md` and `sprint1-plan.md` completed and pushed.
-3. ✅ **Elicitation & Consolidated Evidence (Sections 3 & 4)**: `elicitation-plan.md`, `elicitation-evidence.md`, `elicitation-synthesis.md`, and `evidence.md` completed and pushed.
-4. ✅ **Requirements Models (Section 8)**: Teammate committed 4 draw.io diagrams and comprehensive `Models/README.md` in `doc/sprint1/Models/`.
-5. 🔄 **Governance & Retrospective (Section 13)**: `decisions.md` (with dated entries D-001–D-010) and `retrospective.md` pushed; `ai-use.md` deferred to final sprint close.
-6. ⚠️ **Section 5 Revised Foundations**: Produce updated copies of `glossary.md` (with IPC/AODA), `stakeholders.md` (with TTC IT, Logistics, Payment), and `context.md`.
-7. ⚠️ **Section 9 Traceability Matrix**: Build `traceability.md` connecting all 28 requirements forward and backward (Assigned to Sufyan).
-8. ⚠️ **Section 11 Quality Review**: Formalize `quality-review.md` peer inspection records (Assigned to Sufyan).
-9. ⚠️ **Section 12 Prototype Refinement**: Refine `prototype/README.md` documenting Sprint 1 RE enhancements (Assigned to Anirudh).
-10. 🔄 **Final Integration & PR (Section 14)**: Create the baseline Pull Request with teammate review, log final `ai-use.md`, and submit.
+2. ✅ **Planning & Continuity (Sections 1 & 2)**: `sprint0-feedback.md` and `sprint1-plan.md` completed.
+3. ✅ **Elicitation & Consolidated Evidence (Sections 3 & 4)**: `elicitation-plan.md`, `elicitation-evidence.md`, `elicitation-synthesis.md`, and `evidence.md` completed.
+4. ✅ **Revised Foundations (Section 5)**: `Rev-context.md`, `Rev-glossary.md`, `Rev-personas.md`, `Rev-stakeholders.md`, `Rev-vision-scope.md` committed.
+5. ✅ **Requirements Baseline v1.0 (Section 6)**: 28 atomic requirements, typed IDs, verification ideas, Lab 6 defect evolution.
+6. ✅ **Scenarios, Use Cases, & Acceptance Criteria (Section 7)**: 10 user stories, 3 detailed use cases (UC-01–03), 10 testable Given/When/Then ACs.
+7. ✅ **Requirements Models (Section 8)**: 4 draw.io diagrams and comprehensive `Models/README.md` in `doc/sprint1/Models/`.
+8. ✅ **Traceability Matrix (Section 9)**: `requirements-traceability-matrix.md` with bidirectional mapping from goals to issues.
+9. ✅ **Requirements Quality Review (Section 11)**: `requirements-quality-review.md` peer inspection against 13 quality dimensions.
+10. ✅ **Prototype Refinement (Section 12)**: `prototype/README.md` with storyboards, activity diagrams, and screen flows.
+11. ✅ **Decisions, Retrospective, & AI Use (Section 13)**: `decisions.md` (dated D-001–D-010), `retrospective.md`, and `ai-use.md` declaration log.
+12. 🔄 **Final Submission PR (Section 14)**: Create the Baseline PR on GitHub with teammate approval and submit.
