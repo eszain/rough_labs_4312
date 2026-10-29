@@ -2,6 +2,9 @@
 
 ## Activity A: Goal Model & Refinement
 
+<img width="1491" height="1055" alt="image" src="https://github.com/user-attachments/assets/40dc8cb5-63b3-49ef-a434-92274b7081b0" />
+
+
 Root Goal: G-00 Return recovered transit property to verified owners without unauthorized handover.
 
 ### Goal Decomposition & Alternatives
