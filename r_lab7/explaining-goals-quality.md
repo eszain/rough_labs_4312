@@ -127,15 +127,15 @@ Rewrite at least **three vague quality statements** into measurable, testable sp
 
 ### Detailed Point-by-Point Explanation
 
-### 1. `QR-M01`: Frontline Intake Task Efficiency (Performance)
-* **Vague Statement:** *"The staff interface should allow operators to log found items quickly during shifts."*  
-  *(Why this is bad: What does "quickly" mean? 10 seconds? 5 minutes? You cannot test this.)*
-* **Measurable Specification:** During scheduled terminus layover windows under active cellular/Wi-Fi coverage, the median operator interaction time from tapping "New Intake" to final barcode confirmation shall not exceed **$\le 45$ seconds** across 10 sample trials, with server API response round-trips **$\le 1.5$ seconds**.
+### 1. `QR-001`: Staff Audit Trail Logging (Auditability & Non-Repudiation — Refines `QR-001` / `R-019`)
+* **Vague Statement:** *"The system shall log staff activity and keep an audit trail of user actions for security and compliance."*  
+  *(Why this is bad: Which actions? What fields must be logged? How fast? Can staff delete them? You cannot test this without concrete criteria.)*
+* **Measurable Specification:** For 100% of auditable staff transactions (intake creation, bin movements, claim reviews, phone triage notes, status changes, and physical releases), the system shall write an immutable append-only audit record containing authenticated staff ID, action enum, record ID, and UTC timestamp within **$\le 1.0$ second** of commit, with **zero update or delete operations** permitted on the audit log.
 * **Threshold Rationale:**
-  * **45 Seconds (Documented Transit Policy & Labor Agreements):** Bus operators have a mandatory layover of only 3 to 5 minutes between runs to walk through the vehicle, inspect seats, and adjust schedules. An intake form taking longer than 45 seconds would delay bus departures or cause drivers to ignore found items.
-  * **1.5 Seconds API Latency (Provisional Engineering Assumption):** Mobile networks in underground subway stations or terminal bays experience signal latency. A 1.5-second cap ensures the UI does not feel frozen to a busy operator.
+  * **100% Transaction Capture & Append-Only Storage (Statutory Compliance & Legal Non-Repudiation):** Grounded in municipal compliance and regulatory audit standards (**Ontario MFIPPA**). Transit agencies are legally required to maintain non-repudiable logs showing which employee accessed confidential property or authorized releases to prevent internal theft or wrongful release liability.
+  * **$\le 1.0$ Second Logging Latency (Provisional Engineering Assumption):** Asynchronous database write buffers ensure that audit logging does not stall frontline user transactions, allowing records to be written safely within a 1.0-second window.
 
-### 2. `QR-M02`: Payment Card PII Sanitization (Security & Privacy)
+### 2. `QR-002`: Payment Card PII Sanitization (Security & Privacy — Refines `QR-002` / `R-020`)
 * **Vague Statement:** *"The system must keep passenger credit card information safe in staff notes."*  
   *(Why this is bad: How do you prove data is "safe"? What types of cards?)*
 * **Measurable Specification:** In all free-text triage notes entered by staff, client-side and server-side validation shall detect and sanitize **100%** of 15- and 16-digit numeric sequences matching the Luhn algorithm, replacing the card number with `[CARD MASKED: <Issuer> ****-<Last4>]` before database write, resulting in **0 raw card numbers** in storage or logs.
@@ -143,7 +143,7 @@ Rewrite at least **three vague quality statements** into measurable, testable sp
   * **100% Luhn Sanitization (Statutory Law & Industry Standards):** Under **PCI-DSS Requirement 3.4** and **Ontario MFIPPA Section 42**, transit agencies face severe financial penalties and mandatory privacy breach disclosures if raw payment card numbers are stored in unencrypted text fields.
   * **Retaining Issuer and Last 4 Digits (Operational Verification Standard):** Claims officers verifying lost wallets routinely confirm identity by asking the claimant for the issuing bank and last 4 digits (e.g. "TD Visa ending in 4192"). Preserving only those attributes satisfies verification without storing actionable payment data (Lab 5 Criterion 5).
 
-### 3. `QR-M03`: Public Web Service Availability (Reliability)
+### 3. `CON-001`: Public Web Service Availability (Reliability — Refines `CON-001` / `R-024`)
 * **Vague Statement:** *"The public lost-and-found website should be reliable and available to riders at all times."*  
   *(Why this is bad: 100% uptime is impossible; what about planned server updates?)*
 * **Measurable Specification:** Public reporting and status tracking endpoints shall maintain **$\ge 99.5\%$ monthly uptime** (permitting at most **$\le 3.6$ hours** of unplanned downtime per 30-day month) evaluated by automated synthetic probes running every **60 seconds**, excluding pre-announced maintenance scheduled between 2:00 AM and 5:00 AM with at least **48 hours advance notice**.
