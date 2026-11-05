@@ -42,7 +42,9 @@ To test ranking stability under constrained Sprint 2 engineering capacity, we sh
   - R-013 (Public Browsing): Score drops to 3.50 (ties R-028 at Rank 5).
   - R-017 / R-018 (Courier & Payment): Scores fall to 2.25 and 2.75 (remain locked at bottom).
 - Sensitivity observation:
-  The ranking is sensitive to technical implementation effort. Self-contained features with minimal dependencies (R-026, R-030) rise quickly when engineering capacity tightens. In contrast, complex external gateway dependencies (R-017, R-018) remain fragile at the bottom, confirming that remote delivery should not be scheduled into Sprint 2 without finalized vendor contracts.
+The analysis demonstrates that the prioritization model is partially robust rather than completely stable. R-010 remains the highest priority regardless of weighting changes, while the middle-ranked requirements are more sensitive to engineering constraints. This distinction is important because it identifies requirements that should remain priorities under different circumstances and those that may be rescheduled depending on available development capacity.
+
+Consequently, Sprint 2 should prioritize R-010, R-026, and R-030. R-008 should remain a valuable requirement but may be scheduled after simpler, higher-return features. R-017 and R-018 should be deferred until their external dependencies, vendor agreements, and implementation arrangements are sufficiently established.
 
 ## Activity C: Role-Based Stakeholder Negotiation
 
