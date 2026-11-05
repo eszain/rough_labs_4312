@@ -24,8 +24,8 @@ To test ranking stability under constrained Sprint 2 engineering capacity, we sh
 - Modified weights: Implementation Simplicity 0.50, User Value 0.25, Risk Reduction 0.25.
 - Recalculated scores and shifts:
 | Requirement ID | Requirement Title | UV (0.25) | RC (0.25) | IS (0.5) | Weighted Score | Baseline Rank |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| R-010 / FR-004 | Urgent Property Classification | 5 | 5 | 4 | 4.5 | 1 |
+|---|---|:---:|:---:|:---:|:---:|:---:|
+| R-010 / FR-004 | Urgent Property Classification | 5 | 5 | 4 | 4.50 | 1 |
 | R-008 / FR-002 | Candidate Match Ranking | 5 | 4 | 3 | 3.75 | 4 |
 | R-026 / FR-012 | Automated Claim Notifications | 5 | 3 | 4 | 4.00 | 2 |
 | R-030 / FR-015 | Telephone Triage Management | 4 | 4 | 4 | 4.00 | 2 |
