@@ -112,7 +112,7 @@ Stance: Riders hate traveling downtown to the central lost and found office duri
 Goal: Protect passenger privacy, stop scammers, and keep staff from being overwhelmed.
 Stance: If we publish photos of lost wallets online, thieves will claim them. And if we start mailing items before setting up a payment system, the transit agency will lose thousands of dollars in unpaid shipping bills.
 
-3. Sufyan as the Technical Lead:
+3. Muhammad as the Technical Lead:
 Goal: Deliver working, tested software on time without the servers crashing.
 Stance: The team only has three days before Sprint 2 is due. Building credit card processing and FedEx shipping API integrations takes weeks of setup and security testing. If we try to build it now, we will fail the sprint.
 
