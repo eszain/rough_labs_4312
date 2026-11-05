@@ -23,6 +23,7 @@ We use a weighted scoring model across three criteria on a 1 to 5 scale:
 To test ranking stability under constrained Sprint 2 engineering capacity, we shift weights to emphasize implementation simplicity:
 - Modified weights: Implementation Simplicity 0.50, User Value 0.25, Risk Reduction 0.25.
 - Recalculated scores and shifts:
+
 | Requirement ID | Requirement Title | UV (0.25) | RC (0.25) | IS (0.5) | Weighted Score | Baseline Rank |
 |---|---|:---:|:---:|:---:|:---:|:---:|
 | R-010 / FR-004 | Urgent Property Classification | 5 | 5 | 4 | 4.50 | 1 |
