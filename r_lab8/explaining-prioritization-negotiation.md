@@ -35,6 +35,10 @@ Simple example: Hiding credit card numbers and serial numbers so identity thieve
 How quick and easy is it for our software team to build? Note that 5 means super easy and cheap, while 1 means super hard, slow, and expensive.
 Simple example: Sending a standard email confirmation is easy and gets a 4. Setting up a credit card payment system that connects to third-party shipping couriers is complicated, requires legal contracts, and gets a 2.
 
+Why did we pick 35% for User Value, 35% for Risk, and 30% for Simplicity?
+User Value and Risk are tied at 35% because public transit must balance rider service with legal compliance. Helping riders find lost items is the main goal, but handing a lost laptop to the wrong person or breaking privacy laws causes severe legal trouble. Simplicity is kept at 30% so the team does not take on impossible coding jobs, but we never let an easy feature beat out a necessary passenger service.
+Simple example: If you run a school bus, picking up students on time (User Value) and keeping seatbelts working (Risk and Safety) are equally top priority. How easy the bus is to clean (Simplicity) matters, but you would never pick an easy-to-clean bus if the brakes failed or if it left students stranded.
+
 How the math works:
 Take R-010 (Urgent Property Classification):
 User Value is 5. Multiply by 0.35 = 1.75.

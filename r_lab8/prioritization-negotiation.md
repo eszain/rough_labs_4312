@@ -7,6 +7,9 @@ We use a weighted scoring model across three criteria on a 1 to 5 scale:
 - Risk Reduction & Compliance (RC, weight 0.35): Fraud prevention, municipal privacy compliance (MFIPPA), and custody accountability.
 - Implementation Simplicity (IS, weight 0.30): Ease of construction and absence of external API dependencies (5 = lowest effort, 1 = highest complexity).
 
+Criteria weight rationale:
+User Value and Risk Reduction are each assigned 0.35 because the transit authority must balance rider service with legal compliance. Returning lost property is the primary mission, but privacy violations or releasing items to fraudsters creates serious legal liability. Implementation Simplicity is weighted at 0.30 as a feasibility factor to prevent committing to impossible sprint workloads, while ensuring that easy but low-value features do not take priority over necessary rider services.
+
 | Requirement ID | Requirement Title | UV (0.35) | RC (0.35) | IS (0.30) | Weighted Score | Baseline Rank |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | R-010 / FR-004 | Urgent Property Classification | 5 | 5 | 4 | 4.70 | 1 |
