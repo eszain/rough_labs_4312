@@ -23,7 +23,18 @@ We use a weighted scoring model across three criteria on a 1 to 5 scale:
 To test ranking stability under constrained Sprint 2 engineering capacity, we shift weights to emphasize implementation simplicity:
 - Modified weights: Implementation Simplicity 0.50, User Value 0.25, Risk Reduction 0.25.
 - Recalculated scores and shifts:
-  - R-010 (Urgent Classification): Score 4.50 (retains Rank 1).
+| Requirement ID | Requirement Title | UV (0.25) | RC (0.25) | IS (0.5) | Weighted Score | Baseline Rank |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| R-010 / FR-004 | Urgent Property Classification | 5 | 5 | 4 | 4.5 | 1 |
+| R-008 / FR-002 | Candidate Match Ranking | 5 | 4 | 3 | 3.75 | 4 |
+| R-026 / FR-012 | Automated Claim Notifications | 5 | 3 | 4 | 4.00 | 2 |
+| R-030 / FR-015 | Telephone Triage Management | 4 | 4 | 4 | 4.00 | 2 |
+| R-013 / SR-005 | Privacy-Bounded Public Browsing | 4 | 4 | 3 | 3.50 | 5 |
+| R-028 / SR-006 | Public Catalog Search & Filter | 4 | 2 | 4 | 3.50 | 5 |
+| R-018 / FR-011 | Delivery Fee Settlement Gate | 3 | 4 | 2 | 2.75 | 7 |
+| R-017 / FR-010 | Remote Courier Dispatch Record | 3 | 2 | 2 | 2.25 | 8 |
+
+  -    R-010 (Urgent Classification): Score 4.50 (retains Rank 1).
   - R-026 (Notifications): Score increases to 4.00 (rises from Rank 3 to tied Rank 2).
   - R-030 (Phone Triage): Score 4.00 (rises from Rank 3 to tied Rank 2).
   - R-008 (Match Ranking): Score drops to 3.75 (slips from Rank 2 to Rank 4 due to algorithmic complexity).
