@@ -8,8 +8,8 @@ Legend: [x] completed / ready · [~] substantial draft with open gaps · [ ] mis
 
 | Required file | Rubric Section (marks) | Status | Notes |
 |---|---|---|---|
-| sprint1-feedback.md | 1.1 (3) | [~] | Feedback table is good. Missing: explicit links to Issues/commits/PRs, unresolved feedback section with justifications, and confirmation of assessed v1.0 tag. |
-| sprint2-plan.md | 1.2 (3) | [ ] | Not started. Needs participants, sprint goal, analysis questions, per-member RE responsibilities, internal deadlines, and risks. |
+| sprint1-feedback.md | 1.1 (3) | [x] | Complete. Actionable feedback matrix with 9 items linked to Issues/PRs/commits, 2 unresolved items with technical justifications, and assessed v1.0 commit tag verified. |
+| sprint2-plan.md | 1.2 (3) | [x] | Complete. Documents sprint goals, participants, 6 core RE analysis questions, per-member workload distribution, schedule milestones, and 5 technical/process risks with mitigations. |
 | goals.md | 2.1, 2.3 (11) | [x] | Updated with KAOS goal model description and embedded diagram link. Comprehensive G-10 to G-40 breakdown with AND/OR refinements, gaps, and requirement links. |
 | models/goal-model.[src+export] | 2.2 (5) | [~] | Goal-Model.png (1 MB) is present in models/ and embedded in goals.md. Export image is available; editable source file (.drawio or .puml) is recommended to fulfill [src+export]. |
 | obstacles-conflicts.md | 3 (10) | [x] | Complete. Covers O-01 to O-05, C-01 to C-05 (including C-03 filling the earlier numbering gap), and CH-01 to CH-09. |
@@ -22,7 +22,7 @@ Legend: [x] completed / ready · [~] substantial draft with open gaps · [ ] mis
 | baseline-change-summary.md | 8.1 | [~] | Exists as baseline-change.md (renamed in commit 248718c). Handout requires baseline-change-summary.md and prioritization.md links to that name; filename needs reconciliation. |
 | traceability.md | 8.2 (3) | [ ] | Not started. Needs forward and backward traceability chain (evidence to goal to requirement to QR to scenario to fit criterion to Issue) with negotiation and conflict references. |
 | decisions.md | 13.1 | [~] | Decision log created with 10 formal entries: ND-01 to ND-05 (negotiation) and DD-01 to DD-05 (dependencies). Earlier decisions (goal refinements, quality thresholds, prioritization weights) still to be added per handout section 13.1. |
-| retrospective.md | 9.1 (2) | [ ] | Not started. Needs participants, RE practices review, Sprint 3 improvements, trade-offs, least confident area, and most change-vulnerable area. |
+| retrospective.md | 9.1 (2) | [x] | Complete. Full 8-part reflection covering RE practices, Sprint 3 adjustments, C-03 trade-off, least confident area (QR-013), and change vulnerability (FR-010/FR-011). |
 | ai-use.md | 9.2 (2) | [~] | File exists but contains only a title heading. Needs entries documenting tool use, prompts, and verification across Sprint 2 deliverables. |
 | github-sprint2-setup.md | 8.3 (3) | [ ] | Not started. Awaits live GitHub Issue updates, labels, project board fields, reviewed PR, and v2.0 tag. |
 | prototype/README.md | 12 | [ ] | Handout section 14 requires a prototype README note (a short note stating no prototype changes in Sprint 2 is acceptable). |
@@ -30,8 +30,8 @@ Legend: [x] completed / ready · [~] substantial draft with open gaps · [ ] mis
 ## 2. Marks breakdown and current standing
 
 * Total raw marks: 100 (scaled to 8% of course grade).
-* Marks currently secure or substantially ready: approximately 60 / 100 (Goals, Obstacles/Conflicts, Prioritization, Negotiation, Dependencies).
-* Marks currently missing or incomplete: approximately 40 / 100 (Planning, Quality catalogue consolidation, Traceability, Baseline finalization, Retrospective, AI use, GitHub setup).
+* Marks currently secure or substantially ready: approximately 68 / 100 (Continuity & Planning 6/6, Goals 14/16, Obstacles/Conflicts 10/10, Prioritization 14/14, Negotiation 12/12, Dependencies 8/8, Retrospective 2/2).
+* Marks currently missing or incomplete: approximately 32 / 100 (Quality catalogue consolidation, Traceability, Baseline finalization, AI use, GitHub setup).
 
 ## 3. Work remaining in priority order (marks at risk)
 
@@ -105,9 +105,9 @@ This division assigns primary authoring and cross-review duties across the three
 
 ## 6. Sprint 2 deliverables checklist (Handout Section 17)
 
-* [ ] requirements-baseline-v1.0 tag verified on assessed commit
-* [~] Feedback response (needs issue links and unresolved section)
-* [ ] Sprint 2 plan
+* [x] requirements-baseline-v1.0 tag verified on assessed commit
+* [x] Feedback response (linked matrix, unresolved justifications, v1.0 tag verified)
+* [x] Sprint 2 plan (goals, questions, workload, milestones, risks)
 * [x] Goal analysis and links to requirements
 * [x] Goal model diagram (Goal-Model.png uploaded and linked)
 * [x] Obstacle analysis (5 obstacles O-01 to O-05)
@@ -126,7 +126,7 @@ This division assigns primary authoring and cross-review duties across the three
 * [~] Baseline change summary (rename from baseline-change.md)
 * [ ] Traceability matrix / report (traceability.md)
 * [~] Decision log (ND-01 to ND-05, DD-01 to DD-05; earlier decisions pending)
-* [ ] Retrospective (retrospective.md)
+* [x] Retrospective (full 8-part reflection completed)
 * [~] AI-use disclosure (needs detailed log)
 * [ ] GitHub Issues, labels, and Project board updates
 * [ ] Baseline v2.0 Pull Request with peer review
