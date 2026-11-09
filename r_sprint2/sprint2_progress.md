@@ -120,7 +120,11 @@ Legend: [x] completed / ready · [~] substantial draft with open gaps · [ ] mis
 * [x] Goal model diagram (Goal-Model.png uploaded and linked)
 * [x] Obstacle analysis (5 obstacles O-01 to O-05)
 * [x] Conflict analysis (5 conflicts C-01 to C-05, C-03 resolved)
+<<<<<<< HEAD
 * [x] Quality requirements catalogue (all 15 QRs consolidated)
+=======
+* [x] Quality requirements catalogue (12 in catalogue, 15 in baseline)
+>>>>>>> 9e8294dfee96b52abc17112a09c9a8de1a6d4d35
 * [x] Measurable QRs with fit criteria
 * [x] Threshold origins documented
 * [x] Full-baseline MoSCoW prioritization
@@ -130,9 +134,15 @@ Legend: [x] completed / ready · [~] substantial draft with open gaps · [ ] mis
 * [x] Requirements negotiation and simulated roles
 * [x] Requirements dependency analysis (117 links, 6 types)
 * [x] Dependency diagram (.puml and .svg in models/)
+<<<<<<< HEAD
 * [x] Baseline v2.0 (all 39 requirements, updated status)
 * [x] Baseline change summary (baseline-change-summary.md aligned)
 * [x] Traceability matrix / report (doc/sprint2/traceability.md, 62 KB)
+=======
+* [x] Baseline v2.0 (drafted, needs acceptance status and Issue links)
+* [x] Baseline change summary (rename from baseline-change.md)
+* [ ] Traceability matrix / report (traceability.md)
+>>>>>>> 9e8294dfee96b52abc17112a09c9a8de1a6d4d35
 * [~] Decision log (ND-01 to ND-05, DD-01 to DD-05; earlier decisions pending)
 * [x] Retrospective (full 8-part reflection completed)
 * [~] AI-use disclosure (needs detailed log in ai-use.md)
@@ -141,4 +151,4 @@ Legend: [x] completed / ready · [~] substantial draft with open gaps · [ ] mis
 * [ ] Baseline v2.0 Pull Request with peer review
 * [ ] requirements-baseline-v2.0 tag after merge
 * [ ] GitHub setup report (github-sprint2-setup.md)
-* [ ] Prototype README note
+* [x] Prototype README note
