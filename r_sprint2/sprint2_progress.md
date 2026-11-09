@@ -107,7 +107,7 @@ This division assigns primary authoring and cross-review duties across the three
 * [x] Goal model diagram (Goal-Model.png uploaded and linked)
 * [x] Obstacle analysis (5 obstacles O-01 to O-05)
 * [x] Conflict analysis (5 conflicts C-01 to C-05, C-03 resolved)
-* [~] Quality requirements catalogue (12 in catalogue, 15 in baseline)
+* [x] Quality requirements catalogue (12 in catalogue, 15 in baseline)
 * [x] Measurable QRs with fit criteria
 * [x] Threshold origins documented
 * [x] Full-baseline MoSCoW prioritization
@@ -117,8 +117,8 @@ This division assigns primary authoring and cross-review duties across the three
 * [x] Requirements negotiation and simulated roles
 * [x] Requirements dependency analysis (117 links, 6 types)
 * [x] Dependency diagram (.puml and .svg in models/)
-* [~] Baseline v2.0 (drafted, needs acceptance status and Issue links)
-* [~] Baseline change summary (rename from baseline-change.md)
+* [x] Baseline v2.0 (drafted, needs acceptance status and Issue links)
+* [x] Baseline change summary (rename from baseline-change.md)
 * [ ] Traceability matrix / report (traceability.md)
 * [~] Decision log (ND-01 to ND-05, DD-01 to DD-05; earlier decisions pending)
 * [x] Retrospective (full 8-part reflection completed)
@@ -127,4 +127,4 @@ This division assigns primary authoring and cross-review duties across the three
 * [ ] Baseline v2.0 Pull Request with peer review
 * [ ] requirements-baseline-v2.0 tag after merge
 * [ ] GitHub setup report (github-sprint2-setup.md)
-* [ ] Prototype README note
+* [x] Prototype README note
