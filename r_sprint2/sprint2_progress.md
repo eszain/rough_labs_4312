@@ -35,43 +35,38 @@ Legend: [x] completed / ready · [~] substantial draft with open gaps · [ ] mis
 
 ## 3. Work remaining in priority order (marks at risk)
 
-1. sprint2-plan.md (3 marks, Rubric 1.2):
-   Create doc/sprint2/sprint2-plan.md covering sprint goal, participants, analysis questions, per-member RE responsibilities, internal deadlines, and risks.
+1. traceability.md (3 marks, Rubric 8.2):
+   Create doc/sprint2/traceability.md linking evidence, goals, requirements, quality constraints, scenarios, fit criteria, and Issues (assigned to Anirudh).
 
-2. traceability.md (3 marks, Rubric 8.2):
-   Create doc/sprint2/traceability.md linking evidence, goals, requirements, quality constraints, scenarios, fit criteria, and Issues.
+2. Merge QR-014 to QR-016 into quality-requirements.md (Rubric 4, 20 marks section):
+   Move the full quality scenarios for QR-014, QR-015, and QR-016 from requirements-baseline-v2.md into quality-requirements.md so the quality catalogue is complete (assigned to Sufyan).
 
-3. Merge QR-014 to QR-016 into quality-requirements.md (Rubric 4, 20 marks section):
-   Move the full quality scenarios for QR-014, QR-015, and QR-016 from requirements-baseline-v2.md into quality-requirements.md so the quality catalogue is complete.
+3. Reconcile baseline-change-summary.md and requirements-baseline-v2.md (Rubric 8.1, 4 marks):
+   Rename baseline-change.md to baseline-change-summary.md (or update internal links), update baseline-v2 status from draft to accepted, and add decisions.md references (assigned to Sufyan).
 
-4. retrospective.md (2 marks, Rubric 9.1):
-   Create doc/sprint2/retrospective.md answering the 7 required reflection prompts from handout section 13.2, including least-confident area and most change-vulnerable requirement.
+4. ai-use.md (2 marks, Rubric 9.2):
+   Document AI assistance for dependency modeling, negotiation simulation, and artifact drafting in doc/sprint2/ai-use.md (assigned to Anirudh).
 
-5. ai-use.md (2 marks, Rubric 9.2):
-   Document AI assistance for dependency modeling, negotiation simulation, and artifact drafting in doc/sprint2/ai-use.md.
+5. decisions.md earlier decisions expansion (Handout Section 13.1):
+   Append earlier Sprint 2 decisions (goal refinements, quality thresholds, prioritization weights) alongside the existing ND-01 to ND-05 and DD-01 to DD-05 entries (assigned to Anirudh).
 
-6. Reconcile baseline-change-summary.md and requirements-baseline-v2.md (Rubric 8.1):
-   Rename baseline-change.md to baseline-change-summary.md (or update internal links), update baseline-v2 status from draft to accepted, and add decisions.md references.
+6. prototype/README.md (Handout Section 12):
+   Create prototype/README.md with a brief note confirming the Sprint 2 prototype status (assigned to Sufyan).
 
-7. sprint1-feedback.md updates (Rubric 1.1):
-   Add links to concrete Issues and commits, and complete the section explaining unresolved feedback items with rationale.
-
-8. prototype/README.md (Handout Section 12):
-   Create prototype/README.md with a brief note confirming the Sprint 2 prototype status.
-
-9. Live GitHub repository integration (3 marks, Rubric 8.3):
-   Update Issues #2 to #29 and add new Issues for added requirements, configure labels and Project board, create the baseline v2.0 PR with substantive teammate review, merge, tag requirements-baseline-v2.0, and record evidence in github-sprint2-setup.md.
+7. Live GitHub repository integration and github-sprint2-setup.md (3 marks, Rubric 8.3):
+   Update Issues #2 to #29 and add new Issues for added requirements, configure labels and Project board, create the baseline v2.0 PR with substantive teammate review, merge, tag requirements-baseline-v2.0, and record evidence in github-sprint2-setup.md (assigned to Zain).
 
 ## 4. Three-person workload division and assigned responsibilities
 
 This division assigns primary authoring and cross-review duties across the three group members to ensure even workload distribution and fulfill Rubric Section 1.2.
 
 ### Member 1: Mohammad Zain Al Syed (eszain)
-* Primary author responsibilities:
-  1. sprint2-plan.md (Rubric 1.2, 3 marks): Author the sprint planning document with sprint goals, participants, analytical RE questions, schedule, member workload breakdown, and risk mitigations.
-  2. sprint1-feedback.md (Rubric 1.1, 3 marks): Add explicit links to GitHub Issues, commits, and PRs, author the unresolved feedback section with technical justifications, and verify the v1.0 tag reference.
-  3. retrospective.md (Rubric 9.1, 2 marks): Complete the 7 required retrospective sections from handout 13.2, documenting what worked, Sprint 3 improvements, major trade-offs, the least-confident requirement area, and the area most vulnerable to change.
-  4. ai-use.md (Rubric 9.2, 2 marks): Expand the AI disclosure log with specific entries for tools, prompts, outputs, and verification across Sprint 2 modeling, negotiation, and documentation.
+* Remaining primary author responsibility:
+  1. GitHub repository management and github-sprint2-setup.md (Rubric 8.3, 3 marks): Synchronize live Issues #2 to #29 and create new Issues, apply labels and Project board fields, create the baseline v2.0 PR, conduct genuine teammate reviews, merge into main, apply the requirements-baseline-v2.0 git tag, and author the setup evidence document.
+* Completed author responsibilities:
+  * sprint2-plan.md (Rubric 1.2, 3 marks): Completed.
+  * sprint1-feedback.md (Rubric 1.1, 3 marks): Completed.
+  * retrospective.md (Rubric 9.1, 2 marks): Completed.
 * Peer review responsibilities:
   * Review traceability.md authored by Anirudh.
   * Review quality-requirements.md additions authored by Sufyan.
@@ -89,10 +84,10 @@ This division assigns primary authoring and cross-review duties across the three
 * Primary author responsibilities:
   1. traceability.md (Rubric 8.2, 3 marks): Construct the complete forward and backward traceability matrix connecting evidence to goals, requirements, quality attributes, scenarios, fit criteria, and GitHub Issues, including references to conflicts and negotiation decisions.
   2. decisions.md expansion (Handout Section 13.1): Add the earlier Sprint 2 decisions (goal refinements, quality thresholds, prioritization weights) alongside the existing ND-01 to ND-05 and DD-01 to DD-05 entries.
-  3. Goal model source file preservation (Rubric 2.2): Save and commit the editable source file (.drawio or .puml) for Goal-Model.png into doc/sprint2/models/.
-  4. GitHub repository management and github-sprint2-setup.md (Rubric 8.3, 3 marks): Synchronize live Issues #2 to #29 and create new Issues, apply labels and Project board fields, create the baseline v2.0 PR, conduct genuine teammate reviews, merge into main, apply the requirements-baseline-v2.0 git tag, and author the setup evidence document.
+  3. ai-use.md (Rubric 9.2, 2 marks): Document tools, prompts, outputs, and human verification protocols applied across Sprint 2 modeling, negotiation, and documentation.
+  4. Goal model source file preservation (Rubric 2.2): Save and commit the editable source file (.drawio or .puml) for Goal-Model.png into doc/sprint2/models/.
 * Peer review responsibilities:
-  * Review sprint1-feedback.md and ai-use.md authored by Zain.
+  * Review sprint1-feedback.md and github-sprint2-setup.md authored by Zain.
   * Review requirements-baseline-v2.md and quality-requirements.md authored by Sufyan.
 
 ## 5. Cross-artifact consistency checklist
