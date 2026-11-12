@@ -1,77 +1,56 @@
-# Lab 9: Cross-Team Requirements Inspection Report
+# Lab 9: Cross-Team Requirements Inspection
 
-## 1. Inspection Overview and Review Metadata
+## Activity A: Review Pairing and Inspection Packet
 
-* Date: Thursday, November 12, 2026 (4:00 PM - 5:00 PM)
 * Reviewing Team: Group 11 (Mohammad Zain Al Syed, Muhammad Sufyan, Anirudh Sundar)
-* Inspected Team: Group 04 (Retail POS and Inventory Migration System)
-* Inspected Packet: Sprint 2 Requirements Packet for Cash-to-Digital Retail Transition (Requirements FR-101 to FR-112, FR-201 to FR-208, QR-301 to QR-305, SEC-401 to SEC-403; Checkout Activity Diagram; Traceability Matrix excerpt)
-* Review Discussion: Findings reviewed with Group 04 authors during the in-lab discussion period (4:42 PM - 4:52 PM).
+* Inspected Team: Hospital Systems Team (Emergency Triage and Queue Optimization)
+* Inspected Artifacts: Requirements Baseline (FR01 to FR31, Issues #6 to #73), Goal Tree (GL-1 to GL-4), Triage Queue Model.
+* Defect Taxonomy Used: Ambiguity, Omission, Inconsistency / Contradiction, Unverifiability, Premature Design, Missing Parameter, Audit / Traceability Gap.
+* Discussion Record: Conducted reviewer and author discussion during the in-lab period (4:42 PM - 4:52 PM) to clarify findings without negotiating away valid defects.
 
-## 2. Defect Summary
+## Activity B: Consolidated Inspection Findings
 
-| Defect Type | Critical | High | Medium | Low | Total |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| Contradiction / Inconsistency | 1 | 0 | 0 | 0 | 1 |
-| Unverifiability / Ambiguity | 0 | 1 | 0 | 0 | 1 |
-| Omission | 0 | 1 | 0 | 0 | 1 |
-| Model / Text Mismatch | 0 | 0 | 1 | 0 | 1 |
-| Premature Design / Traceability Gap | 0 | 0 | 1 | 0 | 1 |
-| Non-Atomic Wording | 0 | 0 | 0 | 1 | 1 |
-| **Total** | **1** | **2** | **2** | **1** | **6** |
+We record five substantive findings covering core functional, clinical safety, queue ordering, and notification requirements:
 
-## 3. Detailed Inspection Findings
+1. FR13 vs. FR31: State Contradiction in Condition Updates
+* Location: FR13 (Priority Recalculation, Issue #45) vs. FR31 (Hold Updates for Review, Issue #73).
+* Defect Type: Contradiction / Inconsistency.
+* Severity: Critical.
+* Explanation: FR13 mandates immediate automatic priority recalculation upon receiving a non-urgent patient condition update, whereas FR31 mandates holding routine updates until clinical staff review them. The system cannot recalculate queue order upon submission if updates are held.
+* Actionable Correction: Define a staged transition: place updates in a "Pending Review" status, executing FR13 recalculation only after staff review and approval under FR31.
 
-### Finding 1: Contradiction Between Item Scanning and Payment Confirmation
-* Requirement ID: FR-104 vs. FR-202
-* Defect Type: Contradiction / Inconsistency
-* Severity: Critical
-* Location: Section 3.1 (POS Checkout), page 3 vs. Section 3.3 (Inventory), page 5
-* Problem: FR-202 states that scanning an item barcode immediately deducts that item count from active stock, whereas FR-104 states that sales transactions are committed only after card payment authorization succeeds. If a card declines, times out, or the customer cancels at the pin pad, stock counts become inaccurate because no cancellation rollback is specified.
-* Actionable Recommendation: Update FR-202 so scanned items enter a temporary cart reservation state, committing permanent stock deductions only after the POS receives an approved authorization response from FR-104.
+2. FR26 and FR27 vs. FR02: Clinical Safety Risk in Patient Removal
+* Location: FR26 (Missed Call Move Back, Issue #68), FR27 (Removal After 5 Missed Calls, Issue #69) vs. FR02 (Symptom Tier Ordering, Issue #38).
+* Defect Type: Clinical Safety Risk / Omission.
+* Severity: Critical.
+* Explanation: Automated queue demotion and removal do not evaluate patient acuity. If an unresponsive patient in a high-acuity tier (Tier 1 or 2 resuscitation/emergent) misses calls due to medical collapse in the waiting area, the system demotes and purges them without clinical staff awareness.
+* Actionable Correction: Add an acuity guard condition: "Automated demotion and removal shall apply only to non-urgent tiers. Tiers 1 and 2 shall trigger an immediate staff welfare check instead of queue removal."
 
-### Finding 2: Unverifiability in Offline Payment Processing
-* Requirement ID: QR-301 (Offline POS Operation)
-* Defect Type: Unverifiability / Ambiguity
-* Severity: High
-* Location: Section 4 (Quality Scenarios), page 7
-* Problem: QR-301 states that "the checkout terminal should work smoothly and accept transactions even when the store network connection is unstable or down." Phrasing such as "smoothly" and "unstable or down" lacks measurable conditions, offline storage durations, or floor limit thresholds.
-* Actionable Recommendation: Specify quantitative parameters: "During network outages up to 4 hours, the terminal shall process offline contactless transactions up to a maximum 50 dollar floor limit per transaction, buffering encrypted payment records locally for automatic settlement once connection returns."
+3. FR11: Unverifiable Estimated Wait-Time Calculation
+* Location: FR11 (Estimated Wait-Time Range, Issue #42).
+* Defect Type: Unverifiability / Ambiguity.
+* Severity: High.
+* Explanation: The requirement mandates an estimated wait-time range without defining calculation algorithms, update intervals, or confidence bounds. Because the queue shifts dynamically with emergency arrivals (FR06) and symptom tiers (FR02), an undefined range is untestable and misleading to patients.
+* Actionable Correction: Specify an objective fit criterion: "The system shall recalculate the wait-time range within 60 seconds of any queue change, using historical service rates with a 90% confidence interval, accompanied by an emergency override disclaimer."
 
-### Finding 3: Omission of Split-Tender Payments and Cash Reconciliation
-* Requirement ID: FR-108 (End-of-Day Register Reconciliation)
-* Defect Type: Omission
-* Severity: High
-* Location: Section 3.1 (POS Checkout), page 4
-* Problem: The specification treats payment processing as purely electronic. Because the store currently operates on cash only, customers and cashiers will continue handling cash alongside card payments. The packet omits split-tender transactions (part cash, part debit) as well as daily cash drawer balancing against total sales.
-* Actionable Recommendation: Add requirement FR-108a to allow split-tender transactions across cash and electronic payment, and add FR-108b requiring end-of-day cash drawer counts to reconcile physical cash against logged cash receipts and card terminal totals.
+4. FR03 and FR07 vs. FR22: Priority Inconsistency and Audit Liability
+* Location: FR03 (Queue Override, Issue #6), FR07 (Revert Override, Issue #60) vs. FR22 (Override Log, Issue #25).
+* Defect Type: Priority Inconsistency / Audit Gap.
+* Severity: High.
+* Explanation: FR03 (Staff override) is Must-have, but FR22 (Override log) is only Should-have. Permitting staff to alter clinical triage priority without mandatory audit logging introduces major clinical safety and legal compliance liabilities. FR07 also permits reverting overrides without recording reasons.
+* Actionable Correction: Promote FR22 to Must-have as a mandatory prerequisite for FR03 and FR07: "Every queue override or revert shall require clinician ID, timestamp, and a structured clinical rationale recorded prior to queue reordering."
 
-### Finding 4: Model-to-Text Mismatch in Checkout Process Flow
-* Requirement ID: Checkout Activity Diagram vs. FR-102
-* Defect Type: Model / Text Mismatch
-* Severity: Medium
-* Location: Activity Diagram (`doc/sprint2/models/checkout-flow.png`) vs. Section 3.1 (FR-102)
-* Problem: The Activity Diagram shows a parallel fork initiating card terminal interaction while items are still being scanned. In contrast, specification text in FR-102 states that total item tallying, tax computation, and cashier confirmation must complete before dispatching the payment request to the payment terminal.
-* Actionable Recommendation: Redraw the Activity Diagram to place the card terminal activation step strictly after the subtotal and tax calculation join node.
+5. FR15 and FR16: Missing Escalation Threshold Parameters
+* Location: FR15 (Alert Stays Until Acknowledged, Issue #48) vs. FR16 (Escalate Unacknowledged Alerts, Issue #50).
+* Defect Type: Missing Parameter / Unverifiable Timing.
+* Severity: Medium.
+* Explanation: FR16 mandates escalating unacknowledged emergency alerts but specifies neither the escalation time threshold nor the target role. Without explicit parameters, the escalation logic cannot be verified in acceptance testing.
+* Actionable Correction: Add concrete parameters: "If an emergency alert remains unacknowledged for 120 seconds, the system shall escalate the alert visually and audibly to the on-duty Charge Nurse workstation."
 
-### Finding 5: Premature Design and Missing Compliance Traceability
-* Requirement ID: SEC-401 (Card Data Protection)
-* Defect Type: Premature Design / Broken Traceability
-* Severity: Medium
-* Location: Section 5 (Security and Compliance), page 9; Traceability Matrix
-* Problem: SEC-401 states that "the local store server shall encrypt customer card numbers using AES-256 before saving them to a local SQLite database." Storing primary account numbers locally creates unnecessary PCI-DSS compliance scope for a retail merchant. In addition, SEC-401 has no backward traceability link to a business goal or security standard.
-* Actionable Recommendation: Redefine the requirement using tokenization: "The system shall rely on point-to-point encrypted terminal tokenization, storing only card type, last four digits, and processor authorization tokens." Add a backward traceability link to Goal G-04 (PCI-DSS Compliance).
+## Activity C: Reviewer and Author Discussion and Receiving Team Disposition
 
-### Finding 6: Non-Atomic Specification in Inventory Restocking
-* Requirement ID: FR-205 (Shipment Ingestion and Reorder Dispatch)
-* Defect Type: Non-Atomic Wording
-* Severity: Low
-* Location: Section 3.3 (Inventory Management), page 6
-* Problem: FR-205 combines three separate functions into a single requirement statement: scanning supplier barcode manifests, incrementing active warehouse inventory, and automatically sending reorder purchase orders to distributors when minimum thresholds are reached.
-* Actionable Recommendation: Divide FR-205 into two atomic requirements: FR-205a for barcode manifest scanning and stock incrementation, and FR-205b for automated supplier reorder notifications triggered by low stock thresholds.
+During the in-lab discussion, the receiving team confirmed the defects and agreed to the following disposition for Sprint 3 Phase A:
+* Accept (Critical / High): Findings 1, 2, and 4 will be incorporated directly into the Sprint 3 requirements baseline to fix state contradictions, protect high-acuity patients, and mandate override logging.
+* Clarify (High): Finding 3 will be reviewed with emergency department clinical leadership to determine acceptable wait-time calculation formulas and patient disclaimer wording.
+* Defer (Medium): Finding 5 escalation timing is accepted for requirements, while specific hardware paging integration is deferred to Sprint 3 architecture design.
 
-## 4. Disposition Guidance for Inspected Team
-
-* Recommended Acceptance: Findings 1, 2, and 4 should be accepted and fixed immediately for Sprint 3 Phase A, as they prevent inventory state corruption, clarify testable offline limits, and align the checkout model with text.
-* Recommended Clarification: Finding 3 should be discussed with the shop owner to confirm cash handling workflows, maximum allowed drawer discrepancy thresholds, and split-tender frequency.
-* Recommended Deferral or Phasing: Finding 5 should be accepted in requirements, while detailed payment processor integration and token schema selection can be finalized during Sprint 3 architecture design.
